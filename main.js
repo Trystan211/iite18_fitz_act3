@@ -64,7 +64,7 @@ loader.load(
   (gltf) => {
     const shrine = gltf.scene;
     shrine.position.set(restrictedArea.x, -0.5, restrictedArea.z);
-    shrine.scale.set(1, 1, 1);
+    shrine.scale.set(3, 3, 3);
     scene.add(shrine);
 
     const boundingBox = new THREE.Box3().setFromObject(shrine);
@@ -119,7 +119,7 @@ loader.load(
       const fox = gltf.scene.clone();
       fox.position.set(position.x, 0.5, position.z);
       fox.rotation.y = rotationY;
-      fox.scale.set(1, 1, 1);
+      fox.scale.set(0.3, 0.3, 0.3);
       scene.add(fox);
     }
   },
