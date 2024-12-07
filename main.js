@@ -63,8 +63,8 @@ loader.load(
   'https://trystan211.github.io/iite18_fitz_act3/angel_eyes.glb',
   (gltf) => {
     const shrine = gltf.scene;
-    shrine.position.set(restrictedArea.x, 3, restrictedArea.z);
-    shrine.scale.set(8, 8, 8);
+    shrine.position.set(restrictedArea.x, 5, restrictedArea.z);
+    shrine.scale.set(10, 10, 10);
     scene.add(shrine);
 
     const boundingBox = new THREE.Box3().setFromObject(shrine);
