@@ -64,7 +64,7 @@ loader.load(
   (gltf) => {
     const shrine = gltf.scene;
     shrine.position.set(restrictedArea.x, -0.5, restrictedArea.z);
-    shrine.scale.set(3, 3, 3);
+    shrine.scale.set(8, 8, 8);
     scene.add(shrine);
 
     const boundingBox = new THREE.Box3().setFromObject(shrine);
