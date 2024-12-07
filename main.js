@@ -108,25 +108,6 @@ for (let i = 0; i < 15; i++) {
   trees.push(treeGroup);
 }
 
-// Snow Foxes
-loader.load(
-  'https://trystan211.github.io/iite18_fitz_act3/wolf.glb',
-  (gltf) => {
-    for (let i = 0; i < 6; i++) {
-      const position = getRandomPositionOutsideRestrictedArea();
-      const rotationY = Math.random() * Math.PI * 2;
-
-      const fox = gltf.scene.clone();
-      fox.position.set(position.x, 0.5, position.z);
-      fox.rotation.y = rotationY;
-      fox.scale.set(0.3, 0.3, 0.3);
-      scene.add(fox);
-    }
-  },
-  undefined,
-  (error) => console.error('Error loading fox model:', error)
-);
-
 // Ice Crystals
 const iceMaterial = new THREE.MeshStandardMaterial({
   color: 0x99d8ff,
