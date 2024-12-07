@@ -57,13 +57,13 @@ function getRandomPositionOutsideRestrictedArea() {
   return { x, z };
 }
 
-// Shrine Model
+// Angel
 const loader = new GLTFLoader();
 loader.load(
   'https://trystan211.github.io/iite18_fitz_act3/angel_eyes.glb',
   (gltf) => {
     const shrine = gltf.scene;
-    shrine.position.set(restrictedArea.x, -0.5, restrictedArea.z);
+    shrine.position.set(restrictedArea.x, 3, restrictedArea.z);
     shrine.scale.set(8, 8, 8);
     scene.add(shrine);
 
