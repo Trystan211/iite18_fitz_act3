@@ -60,11 +60,11 @@ function getRandomPositionOutsideRestrictedArea() {
 // Shrine Model
 const loader = new GLTFLoader();
 loader.load(
-  'https://trystan211.github.io/test_joshua/fox_stone_statue_handpainted_kitsune.glb',
+  'https://trystan211.github.io/iite18_fitz_act3/angel_eyes.glb',
   (gltf) => {
     const shrine = gltf.scene;
     shrine.position.set(restrictedArea.x, -0.5, restrictedArea.z);
-    shrine.scale.set(250, 250, 250);
+    shrine.scale.set(1, 1, 1);
     scene.add(shrine);
 
     const boundingBox = new THREE.Box3().setFromObject(shrine);
@@ -110,7 +110,7 @@ for (let i = 0; i < 15; i++) {
 
 // Snow Foxes
 loader.load(
-  'https://trystan211.github.io/test_joshua/low_poly_fox.glb',
+  'https://trystan211.github.io/iite18_fitz_act3/wolf.glb',
   (gltf) => {
     for (let i = 0; i < 6; i++) {
       const position = getRandomPositionOutsideRestrictedArea();
@@ -119,7 +119,7 @@ loader.load(
       const fox = gltf.scene.clone();
       fox.position.set(position.x, 0.5, position.z);
       fox.rotation.y = rotationY;
-      fox.scale.set(0.8, 0.8, 0.8);
+      fox.scale.set(1, 1, 1);
       scene.add(fox);
     }
   },
